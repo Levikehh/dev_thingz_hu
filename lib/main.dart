@@ -1,6 +1,5 @@
-import 'package:dev_thingz_hu/constants.dart';
+import 'package:dev_thingz_hu/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:dev_thingz_hu/screens/main/main_screen.dart';
 
 void main() {
@@ -13,12 +12,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'thingz Developer Site',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: bgColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: textColor),
-        canvasColor: primaryColor,
-      ),
+      themeMode: ThemeMode.system,
+      theme: lightTheme(context),
+      darkTheme: darkTheme(context),
       home: MainScreen(),
     );
   }

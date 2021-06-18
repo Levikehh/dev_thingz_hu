@@ -1,3 +1,4 @@
+import 'package:dev_thingz_hu/screens/components/my_files.dart';
 import 'package:dev_thingz_hu/screens/components/storage_details.dart';
 import 'package:flutter/material.dart';
 import 'package:dev_thingz_hu/constants.dart';
@@ -16,13 +17,11 @@ class DashboardScreen extends StatelessWidget {
             Header(),
             SizedBox(height: defaultPadding),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 5,
-                  child: Container(
-                    height: 500,
-                    color: Colors.white,
-                  ),
+                  child: MyFiles(),
                 ),
                 SizedBox(width: defaultPadding),
                 Expanded(

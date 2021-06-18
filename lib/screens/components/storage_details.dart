@@ -27,31 +27,44 @@ class StorageDetails extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w500,
+              color: bgColor,
             ),
           ),
           SizedBox(height: defaultPadding),
           Chart(),
           StorageInfoCard(
             title: "Document Files",
-            icon: Icon(Icons.work),
+            icon: Icon(
+              Icons.work,
+              color: bgColor,
+            ),
             numberOfFiles: 1329,
             amountOfFiles: "1.3Gb",
           ),
           StorageInfoCard(
             title: "Media Files",
-            icon: Icon(Icons.perm_media),
+            icon: Icon(
+              Icons.perm_media,
+              color: bgColor,
+            ),
             numberOfFiles: 1329,
             amountOfFiles: "1.3Gb",
           ),
           StorageInfoCard(
             title: "Audio Files",
-            icon: Icon(Icons.audiotrack),
+            icon: Icon(
+              Icons.audiotrack,
+              color: bgColor,
+            ),
             numberOfFiles: 1329,
             amountOfFiles: "1.3Gb",
           ),
           StorageInfoCard(
             title: "Other Files",
-            icon: Icon(Icons.file_copy),
+            icon: Icon(
+              Icons.file_copy,
+              color: bgColor,
+            ),
             numberOfFiles: 1329,
             amountOfFiles: "1.3Gb",
           ),
@@ -60,4 +73,3 @@ class StorageDetails extends StatelessWidget {
     );
   }
 }
-

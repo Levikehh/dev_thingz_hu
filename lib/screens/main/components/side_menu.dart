@@ -1,3 +1,4 @@
+import 'package:dev_thingz_hu/constants.dart';
 import 'package:flutter/material.dart';
 
 class SideMenu extends StatelessWidget {
@@ -12,13 +13,16 @@ class SideMenu extends StatelessWidget {
         child: Column(
           children: [
             DrawerHeader(
-              child: Icon(Icons.home),
+              child: Icon(
+                Icons.home,
+                color: bgColor,
+              ),
             ),
             DrawerListTile(
               title: "Dashboard",
               icon: Icon(
                 Icons.home,
-                color: Colors.black54,
+                color: bgColor,
                 size: 18,
               ),
               press: () {},
@@ -27,7 +31,7 @@ class SideMenu extends StatelessWidget {
               title: "Users",
               icon: Icon(
                 Icons.group,
-                color: Colors.black54,
+                color: bgColor,
                 size: 18,
               ),
               press: () {},
@@ -36,7 +40,7 @@ class SideMenu extends StatelessWidget {
               title: "Documents",
               icon: Icon(
                 Icons.library_books,
-                color: Colors.black54,
+                color: bgColor,
                 size: 18,
               ),
               press: () {},
@@ -67,7 +71,9 @@ class DrawerListTile extends StatelessWidget {
       leading: icon,
       title: Text(
         title,
-        style: TextStyle(color: Colors.black54),
+        style: TextStyle(
+          color: bgColor,
+        ),
       ),
     );
   }

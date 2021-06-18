@@ -22,7 +22,7 @@ class StorageInfoCard extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border.all(
           width: 2,
-          color: textColor.withOpacity(.15),
+          color: bgColor.withOpacity(.2),
         ),
         borderRadius: const BorderRadius.all(
           Radius.circular(defaultPadding),
@@ -43,6 +43,9 @@ class StorageInfoCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
+                    style: TextStyle(
+                      color: bgColor,
+                    ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -57,7 +60,12 @@ class StorageInfoCard extends StatelessWidget {
               ),
             ),
           ),
-          Text(amountOfFiles)
+          Text(
+            amountOfFiles,
+            style: TextStyle(
+              color: bgColor,
+            ),
+          ),
         ],
       ),
     );
